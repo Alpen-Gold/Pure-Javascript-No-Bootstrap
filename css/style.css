@@ -1,0 +1,283 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1440px) {
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 670px !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 900px) {
+  .container {
+    width: 900px !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+  }
+}
+body {
+  color: white;
+  background-color: rgb(5, 6, 14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  margin: 70px 0;
+}
+
+.all-button {
+  background-color: rgb(5, 6, 14);
+  padding: 10px 15px;
+  color: white;
+  box-shadow: 0 0 12px #80de50;
+  font-size: 15px;
+  border: 2px solid #80de50;
+  color: #80de50;
+  transition: 0.5s;
+}
+.all-button:hover {
+  box-shadow: 0 0 20px #80de50;
+  background-color: #80de50;
+  color: white;
+  transition: 0.5s;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card {
+  padding: 20px;
+  background-color: rgb(5, 6, 14);
+  width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px #80de50;
+}
+.card #spinner-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.card #error,
+.card #text-error {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card #error i,
+.card #text-error i {
+  color: red;
+  padding-right: 5px;
+}
+.card button:active {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.card > :nth-child(1) {
+  margin: 0;
+  font-size: 45px;
+  padding-bottom: 20px;
+}
+.card .post-btn,
+.card .box-btn {
+  box-shadow: 0 0 12px #176ceb;
+  border: 2px solid #176ceb;
+  color: #176ceb;
+  transition: 0.5s;
+}
+.card .post-btn:hover,
+.card .box-btn:hover {
+  box-shadow: 0 0 20px #176ceb;
+  background-color: #176ceb;
+  color: white;
+  transition: 0.5s;
+}
+.card .input-in-btn input {
+  font-size: 18px;
+}
+.card .input-in-btn {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.card .input-in-btn input {
+  flex: 1;
+  padding: 5px 10px;
+  box-shadow: 0 0 12px #176ceb;
+  border: 2px solid #176ceb;
+  color: #176ceb;
+  background-color: rgb(5, 6, 14);
+}
+.card .input-in-btn div {
+  display: flex;
+  gap: 20px;
+}
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+  border: 1px solid grey;
+  border-bottom: none;
+  border-radius: 5px;
+}
+.card ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  padding: 15px 10px;
+}
+.card ul #text-didtn {
+  text-decoration: line-through;
+  color: gray;
+}
+.card ul #delete-btn {
+  box-shadow: 0 0 12px rgb(244, 1, 1);
+  border: 2px solid red;
+  color: red;
+  transition: 0.5s;
+}
+.card ul #delete-btn:hover {
+  box-shadow: 0 0 20px red;
+  background-color: red;
+  color: white;
+  transition: 0.5s;
+}
+.card ul .button-li {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.card ul #check {
+  color: #80de50;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.card ul .text-li {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  flex: 1;
+}
+
+#spinner {
+  width: 48px;
+  height: 48px;
+  background: black;
+  border-radius: 50%;
+  position: relative;
+  animation: roll 1s ease-in-out infinite alternate;
+}
+
+#spinner:after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 5px solid;
+  border-color: #80de50 transparent;
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(-150%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(150%) rotate(360deg);
+  }
+}
+@media only screen and (max-width: 650px) {
+  .card {
+    width: 360px;
+  }
+  .card > :nth-child(1) {
+    font-size: 35px;
+  }
+  .card button {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  .card .input-in-btn input {
+    width: 150px;
+    font-size: 13px;
+  }
+  .card .input-in-btn div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card ul .button-li {
+    margin: 0 5px;
+  }
+  .card ul #check {
+    font-size: 15px;
+  }
+  .card li .text-li {
+    margin: 0;
+    padding: 0;
+    font-size: 16px !important;
+    flex: 1;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .container {
+    width: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+  }
+  .card {
+    width: 350px;
+  }
+  .card > :nth-child(1) {
+    font-size: 20px;
+  }
+  .card button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  .card .input-in-btn input {
+    width: 120px;
+    font-size: 10px;
+  }
+  .card .input-in-btn div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card ul .button-li {
+    margin: 0 5px;
+  }
+  .card ul #check {
+    font-size: 15px;
+  }
+  .card li .text-li {
+    margin: 0;
+    padding: 0;
+    font-size: 13px !important;
+    flex: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

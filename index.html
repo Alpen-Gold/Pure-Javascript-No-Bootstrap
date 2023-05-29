@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- css link -->
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Todo App</h1>
+
+        <div class="input-in-btn">
+          <input type="text" placeholder="New Task" id="input-post-and-put" />
+
+          <div>
+            <button class="post-btn all-button" onclick="postBtn()">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <button class="box-btn all-button" onclick="putBtn()">
+              <i class="fa-solid fa-box-open"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- write the text -->
+
+        <div id="text-error">
+          <h1>
+            <span><i class="fas fa-warning"></i></span> Write the text
+          </h1>
+        </div>
+        <!-- spinner -->
+        <div id="spinner-card">
+          <div id="spinner" class="all-button"></div>
+        </div>
+
+        <!-- error -->
+
+        <div id="error">
+          <h1>
+            <span> <i class="fas fa-warning"></i></span>
+            Error
+          </h1>
+        </div>
+
+        <ul id="ul">
+          <!-- <li>
+            <p class="text-li">saausdhasjkasldudyga</p>
+
+            <div class="button-li">
+              <i class="fa-solid fa-circle-check" id="check"></i>
+
+              <button class="all-button" id="delete-btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+
+              <button class="all-button" id="pen-btn">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- ======================================================================== -->
+
+    <!-- axios -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
